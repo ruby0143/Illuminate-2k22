@@ -70,7 +70,7 @@ app.post("/register",function(req,res){
 app.post("/",(req,res)=>{
     if(req.body.key===1){
         const user =  new rUser({
-            eventName : req.body.event,
+            eventName : req.body.eventName,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
             email : req.body.email,
@@ -80,7 +80,7 @@ app.post("/",(req,res)=>{
     }
     else if(req.body.key===2){
         const user =  new rUser({
-            eventName : req.body.event,
+            eventName : req.body.eventName,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
             t2Name : req.body.t2name,
@@ -92,7 +92,7 @@ app.post("/",(req,res)=>{
     }
     else{
         const user =  new rUser({
-            eventName : req.body.event,
+            eventName : req.body.eventName,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
             t2Name : req.body.t2name,

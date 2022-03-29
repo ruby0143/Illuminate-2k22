@@ -1,0 +1,55 @@
+body{
+    
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-gradient-flat-space-planet-banner-background-image_229576.jpg');
+    font-family: 'Julius Sans One', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.body-content{
+    font-family: 'Julius Sans One', sans-serif;
+    display: flex;
+    margin: 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background: linear-gradient(to bottom right, #c644c9 0%, #4b319e 100%);
+    border-radius: 8px;
+}
+.body-content h1{
+    text-align: center;
+    margin: 25px;
+}
+
+.body-content hr{
+    width: 85%;
+    margin-left: 60px;
+}
+.body-content h4{
+    margin: 30px;
+    margin-left: 40px;
+}
+
+#mobile{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+@media screen and (max-width:600px){
+    .body-content{
+        margin-left: 70px;
+    }
+    .body-content hr{
+        margin-left: 28px;
+    }
+    .body-content h4{
+        
+        margin-left: 20px;
+    }
+}

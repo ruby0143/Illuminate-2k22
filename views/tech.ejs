@@ -1,0 +1,107 @@
+<%-include("partials/nav");-%>
+<link rel="stylesheet" href="/public/css/styles.css">
+<title>Events</title>
+</head>
+
+<body>
+<!--Title-->
+<h1 id="head">Events</h1>
+
+<!--Events-->
+<section>
+  <div class="row">
+    <div class="events-col col-lg-4 col-sm-12">
+      <div class="card" id="event">
+        <div class="card-header">
+          <h3>Technical Quiz</h3>
+        </div>
+        <div class="card-body">
+          <h5>Description</h5>
+          <p>Event details</p>
+          <form action="/register" method="post">
+              <input type="hidden" name="decider" value="2" />
+              <button class="btn btn-lg btn-outline-dark" name="event" value="Technical Quiz" type="submit">
+                Register
+              </button> 
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="events-col col-lg-4 col-sm-12">
+      <div class="card" id="event">
+        <div class="card-header">
+          <h3>Coding</h3>
+        </div>
+        <div class="card-body">
+          <h5>Description</h5>
+          <p>Event details</p>
+          <form action="/register" method="post">
+            <input type="hidden" name="decider" value="2" />
+            <button class="btn btn-lg btn-outline-dark" name="event" value="Coding" type="submit">
+              Register
+            </button> 
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="events-col col-lg-4 col-sm-12">
+      <div class="card" id="event">
+        <div class="card-header">
+          <h3>Tech Talk</h3>
+        </div>
+        <div class="card-body">
+          <h5>Description</h5>
+          <p>Paper Presentation</p>
+          <form action="/register" method="post">
+            <input type="hidden" name="decider" value="4" />
+            <button class="btn btn-lg btn-outline-dark" name="event" value="Tech Talk" type="submit">
+              Register
+            </button> 
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="events-col col-lg-4 col-sm-12">
+      <div class="card" id="event">
+        <div class="card-header">
+          <h3>Poster Presentation</h3>
+        </div>
+        <div class="card-body">
+          <h5>Description</h5>
+          <p>Event Details</p>
+          <form action="/register" method="post">
+            <input type="hidden" name="decider" value="2" />
+            <button class="btn btn-lg btn-outline-dark" name="event" value="Poster Presentation" type="submit">
+              Register
+            </button> 
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="events-col col-lg-4 col-sm-12">
+      <div class="card" id="event">
+        <div class="card-header">
+          <h3>Project Expo</h3>
+        </div>
+        <div class="card-body">
+          <h5>Description</h5>
+          <p>Event details</p>
+          <form action="/register" method="post">
+            <input type="hidden" name="decider" value="4" />
+            <button class="btn btn-lg btn-outline-dark" name="event" value="Project Expo" type="submit">
+              Register
+            </button> 
+        </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<%-include("partials/footer");-%>
+</html>

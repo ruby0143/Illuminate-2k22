@@ -1,0 +1,84 @@
+<%-include("partials/nav");-%>
+    <link rel="stylesheet" href="/public/css/register.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="form-body">
+      <div class="event-details">
+        <h2><%= ename %></h2>
+        <hr class="hr-head">
+        <div id="div">
+          <h3>Rules: </h3>
+
+          <ul>
+            <li id="details">A student can atmost participate in two events.</li>
+            <li id="details">Food is not provided by the college but food stalls will be available at the college.</li>
+            <li id="details">No entry fee.</li>
+          </ul>
+        </div>
+      </div>
+
+      <form action="/" method="post" class="form">
+        <div class="form-details">
+            <h1 class="hide" ><%= keys %></h1>
+            <div class="t1">
+              <div class="t1name" id="div">
+                <label for="T1" id="form-label">Team Member 1: </label>
+                <input type="text" name="t1name"  placeholder=" " />
+              </div>
+              <div class="t1rno" id="div">
+                <label for="rno" id="form-label">Team Member 1 roll number:</label>
+                <input type="text" name="t1no"  />
+              </div>
+            </div>
+          </div>
+            <div class="email" id="div">
+              <label for="email" id="form-label">Email: </label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="tel" id="div">
+              <label for="tel" id="form-label">Mobile number</label>
+              <input type="tel"  name="mobile"  id="mnumber" />
+            </div>   
+            <button type="submit" name="event" value="event-name" class="btn btn-primary" id="reg">Register</button>
+          </div>       
+        </div>
+      </form>
+     
+    </div>
+
+    
+    <%-include("partials/footer");-%>
+    <script >
+      const decider = $('.hide').text();
+      console.log(decider);
+      function addMember2(){
+        $('.form-details').append(
+         ' <div class="t2"> <div class="t2name" id="div"> <label for="T2" id="form-label">Team Member 2: </label> <input type="text" name="t2name"  placeholder=" " /> </div> <div class="t2rno" id="div"> <label for="rno" id="form-label">Team Member 2 roll number:</label> <input type="text" name="t2no" /> </div>   </div> '
+        );
+      }
+
+      function addMember3(){
+        $('.form-details').append(
+         ' <div class="t3"> <div class="t3name" id="div"> <label for="T3" id="form-label">Team Member 3: </label> <input type="text" name="t3name"  placeholder=" " /> </div> <div class="t3rno" id="div"> <label for="rno" id="form-label">Team Member 3 roll number:</label> <input type="text" name="t3no" /> </div>   </div> '
+        );
+      }
+
+      function addMember4(){
+        $('.form-details').append(
+         ' <div class="t4"> <div class="t4name" id="div"> <label for="T4" id="form-label">Team Member 4: </label> <input type="text" name="t4name"  placeholder=" " /> </div> <div class="t4rno" id="div"> <label for="rno" id="form-label">Team Member 4 roll number:</label> <input type="text" name="t4no" /> </div>   </div> '
+        );
+      }
+      
+      if(decider==="2"){
+        addMember2();
+      }
+      else if(decider==="4"){
+        addMember2();
+        addMember3();
+        addMember4();
+      }
+    </script>
+  </html>
+    

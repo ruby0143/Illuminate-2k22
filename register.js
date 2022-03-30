@@ -11,7 +11,7 @@
                 <input type="text" name="t2name"  placeholder=" " />
               </div>
               <div class="t2rno" id="div">
-                <label for="rno" id="form-label">Team Member 2 roll number:</label>
+                <label for="rno" id="form-label">Team Member 2 Roll Number:</label>
                 <input type="text" name="t2no" />
               </div>
             </div>
@@ -26,7 +26,7 @@
                 <input type="text" name="t2name"  placeholder=" " />
               </div>
               <div class="t3rno" id="div">
-                <label for="rno" id="form-label">Team Member 3 roll number:</label>
+                <label for="rno" id="form-label">Team Member 3 Roll Number:</label>
                 <input type="text" name="t3no" />
               </div>
             </div>
@@ -41,7 +41,7 @@
                 <input type="text" name="t4name"  placeholder=" " />
               </div>
               <div class="t4rno" id="div">
-                <label for="rno" id="form-label">Team Member 4 roll number:</label>
+                <label for="rno" id="form-label">Team Member 4 Roll Number:</label>
                 <input type="text" name="t4no" />
               </div>
             </div>

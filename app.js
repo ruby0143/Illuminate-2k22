@@ -25,7 +25,8 @@ const formSchema = {
     t4Name : String,
     t4Rno : String,
     email : String,
-    mobile : Number
+    mobile : Number,
+    branch : String
 };
 
 const rUser = mongoose.model("RUser",formSchema);
@@ -61,6 +62,13 @@ app.get("/contact",(req,res)=>{
 app.get("/thankyou",(req,res)=>{
     res.render("thankyou");
 });
+
+// app.get("/8074662205",(request,response)=>{
+//     rUser.find({},(req,res)=>{
+//         response.send(res);
+//     });
+// });
+
 app.post("/register",function(req,res){
     const event = req.body.event;
     const key = req.body.decider;
@@ -73,6 +81,7 @@ app.post("/",(req,res)=>{
             eventName : req.body.eventName,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
+            branch : req.body.branch,
             email : req.body.email,
             mobile : req.body.mobile
         });
@@ -81,6 +90,7 @@ app.post("/",(req,res)=>{
     else if(req.body.key===2){
         const user =  new rUser({
             eventName : req.body.eventName,
+            branch : req.body.branch,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
             t2Name : req.body.t2name,
@@ -93,6 +103,7 @@ app.post("/",(req,res)=>{
     else{
         const user =  new rUser({
             eventName : req.body.eventName,
+            branch : req.body.branch,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
             t2Name : req.body.t2name,

@@ -1,0 +1,8 @@
+<% for(const item in rules){ %>
+    <li id="details"><%= rules[item] %></li>
+ <% } %>
+
+ rule.find({name :event},function(request,response){
+        const rule = response;
+        res.render("register",{ename : event, keys : key, rules: rule[0].rules});
+    })

@@ -30,9 +30,14 @@ const formSchema = {
     branch : String
 };
 
+const ruleSchema = {
+    name : String,
+    rules : Object
+};
+
 const rUser = mongoose.model("RUser",formSchema);
 
-
+const rule = mongoose.model("Rule",ruleSchema);
 
 
 app.get("/",function(req,res){

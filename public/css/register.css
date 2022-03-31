@@ -68,6 +68,11 @@ input{
     color: white;
 }
 
+.special{
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (max-width:600px) {
     .form-body{
         margin :40px;

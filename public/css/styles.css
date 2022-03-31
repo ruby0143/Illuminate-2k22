@@ -33,6 +33,7 @@ a:hover{
     color: white;
 }
 
+
 @media screen and (min-width:1000px) {
     #event{
         margin: 50px;

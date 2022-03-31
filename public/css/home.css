@@ -38,7 +38,8 @@ body{
 
 @media screen and (max-width:600px){
     .body-content{
-        margin-left: 70px;
+        margin-left: 40px;
+        width: 80%;
     }
     .body-content hr{
         margin-left: 28px;

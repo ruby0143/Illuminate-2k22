@@ -70,7 +70,7 @@ input{
 
 @media screen and (max-width:600px) {
     .form-body{
-        margin :50px;
+        margin :40px;
         width: 80%;
     }
     .event-details{

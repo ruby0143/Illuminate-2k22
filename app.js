@@ -26,6 +26,7 @@ const formSchema = {
     t4Rno : String,
     email : String,
     mobile : Number,
+    college : String,
     branch : String
 };
 
@@ -81,6 +82,7 @@ app.post("/",(req,res)=>{
             eventName : req.body.eventName,
             t1Name : req.body.t1name,
             t1Rno : req.body.t1no,
+            college : req.body.college,
             branch : req.body.branch,
             email : req.body.email,
             mobile : req.body.mobile
@@ -95,6 +97,7 @@ app.post("/",(req,res)=>{
             t1Rno : req.body.t1no,
             t2Name : req.body.t2name,
             t2Rno : req.body.t2no,
+            college : req.body.college,
             email : req.body.email,
             mobile : req.body.mobile
         });
@@ -112,6 +115,7 @@ app.post("/",(req,res)=>{
             t3Rno : req.body.t3no,
             t4Name : req.body.t4name,
             t4Rno : req.body.t4no,
+            college : req.body.college,
             email : req.body.email,
             mobile : req.body.mobile
         });

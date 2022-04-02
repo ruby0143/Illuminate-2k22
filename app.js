@@ -78,6 +78,9 @@ app.get("/8074662205",(request,response)=>{
 app.post("/register",function(req,res){
     const event = req.body.event;
     const key = req.body.decider;
+    if(event === "Treasure Hunt" || event==="Gaming"){
+        res.send("Registrations will open soon.")
+    }
     res.redirect(`/register/${event}/${key}`);
 });
 

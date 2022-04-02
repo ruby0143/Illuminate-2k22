@@ -40,7 +40,11 @@ const rUser = mongoose.model("RUser",formSchema);
 const rule = mongoose.model("Rule",ruleSchema);
 
 
-app.get("/",function(req,res){
+app.get("/",(req,res)=>{
+    res.render("animation");
+});
+
+app.get("/home",function(req,res){
     res.render("home");
 });
 
@@ -74,6 +78,8 @@ app.get("/8074662205",(request,response)=>{
         response.send(res);
     });
 });
+
+
 
 app.post("/register",function(req,res){
     const event = req.body.event;

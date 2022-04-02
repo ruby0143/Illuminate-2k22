@@ -1,7 +1,4 @@
 
-// function helper(){
-//     const decider = $("#reg").text();
-//       console.log(decider);
 
       function addMember2(){
         $(".form-details").append(
@@ -55,6 +52,3 @@
         addMember3();
         addMember4();
       }
-// }
-
-// helper();

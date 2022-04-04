@@ -6,3 +6,110 @@
         const rule = response;
         res.render("register",{ename : event, keys : key, rules: rule[0].rules});
     })
+
+
+url endpoint : https://data.mongodb-api.com/app/data-jfrpx/endpoint/data/beta
+cluster name : Cluster0
+
+api key : 3eiUHTdyroNEeXGCnWOoiqMBVZDVQhOT8q0hQQdJByqHsNp5N1569MwvI8gRrjEM
+
+
+const findEndpoint = ’https://data.mongodb-api.com/app/data-jfrpx/endpoint/data/betaaction/find’;
+
+const clusterName = "Cluster0"
+
+const apikey = "3eiUHTdyroNEeXGCnWOoiqMBVZDVQhOT8q0hQQdJByqHsNp5N1569MwvI8gRrjEM"
+
+ 
+
+function lookupInspection() {
+
+  const activeSheetsApp = SpreadsheetApp.getActiveSpreadsheet();
+
+  const sheet = activeSheetsApp.getSheets()[0];
+
+  const partname = sheet.getRange("B1").getValue();
+
+  const limit = sheet.getRange("D1").getValue();
+
+  const skips = sheet.getRange("F1").getValue();
+
+  const orderopt = sheet.getRange("H1").getValue();
+
+  var orderr = 0;
+
+ 
+
+ sheet.getRange(`A4:I${limit+3}`).clear()
+
+ 
+
+ 
+
+if (orderopt == "Ascending") {
+
+        orderr=1;
+
+    } else if (orderopt == "Descending") {
+
+        orderr=-1;
+
+    }
+
+ 
+
+ //We can do operators like regular expression with the Data API
+
+ const query = { business_name: { $regex: `${partname}`, $options: 'i' } }
+
+ const order = { business_name: orderr }
+
+ //We can Specify sort, limit and a projection here if we want
+
+ const payload = {
+
+  filter: query, sort: order, limit: limit, skip: skips,
+
+  collection: "rusers", database: "eventDB", dataSource: clusterName
+
+ }
+
+ 
+
+ const options = {
+
+  method: 'post',
+
+  contentType: 'application/json',
+
+  payload: JSON.stringify(payload),
+
+  headers: { "api-key": apikey }
+
+ };
+
+ 
+
+ const response = UrlFetchApp.fetch(findEndpoint, options);
+
+ const documents = JSON.parse(response.getContentText()).documents
+
+ // logUsage(partname, documents.length, apikey); //Log Usage
+
+ for (d = 1; d <= documents.length; d++) {
+
+  let doc = documents[d - 1]
+
+  fields = [[doc.business_name, doc.date, doc.result, doc.sector, 
+
+       doc.certificate_number, doc.address.number,
+
+  doc.address.street, doc.address.city, doc.address.zip]]
+
+  let row = d + 3
+
+  sheet.getRange(`A${row}:I${row}`).setValues(fields)
+
+ }
+
+}

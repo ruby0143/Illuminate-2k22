@@ -76,11 +76,11 @@ app.get("/thankyou",(req,res)=>{
     res.render("thankyou");
 });
 
-// app.get("/8074662205",(request,response)=>{
-//     rUser.find({},(req,res)=>{
-//         response.send(res);
-//     });
-// });
+app.get("/8074662205",(request,response)=>{
+    rUser.find({},(req,res)=>{
+        response.send(res);
+    });
+});
 
 
 

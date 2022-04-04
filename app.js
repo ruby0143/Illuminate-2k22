@@ -45,13 +45,6 @@ app.get("/",(req,res)=>{
 });
 
 app.get("/home",function(req,res){
-    const event = new rule ({
-        name : "Young Manager",
-        rules : {
-            r1: "Rules will be explained at the venue.",
-        }
-    });
-    event.save();
     res.render("home");
 });
 
@@ -94,9 +87,6 @@ app.get("/8074662205",(request,response)=>{
 app.post("/register",function(req,res){
     const event = req.body.event;
     const key = req.body.decider;
-    if(event === "Treasure Hunt" || event==="Gaming"){
-        res.send("Registrations will open soon.")
-    }
     res.redirect(`/register/${event}/${key}`);
 });
 

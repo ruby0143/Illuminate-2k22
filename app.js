@@ -64,9 +64,9 @@ app.get("/register/:event/:key",function(req,res){
     const event = req.params.event;
     const key = req.params.key;
     rule.find({name :event},function(request,response){
-        const rule = response;
-        res.render("register",{ename : event, keys : key, rules: rule[0].rules});
-    })
+        const rule = response[0].rules;
+        res.render("register",{ename : event, keys : key, rules: rule});
+    });
 });
 
 app.get("/contact",(req,res)=>{

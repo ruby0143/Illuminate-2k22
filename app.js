@@ -30,14 +30,14 @@ const formSchema = {
     branch : String
 };
 
-const ruleSchema = {
-    name : String,
-    rules : Object
-};
+// const ruleSchema = {
+//     name : String,
+//     rules : Object
+// };
 
 const rUser = mongoose.model("RUser",formSchema);
 
-const rule = mongoose.model("Rule",ruleSchema);
+// const rule = mongoose.model("Rule",ruleSchema);
 
 
 app.get("/",(req,res)=>{
@@ -60,13 +60,11 @@ app.get("/mba",(req,res)=>{
     res.render("mba");
 });
 
-app.get("/register/:event/:key",function(req,res){
+app.get("/register/:event/:key/:type",function(req,res){
     const event = req.params.event;
     const key = req.params.key;
-    rule.find({name :event},function(request,response){
-        const rule = response[0].rules;
-        res.render("register",{ename : event, keys : key, rules: rule});
-    });
+    const type = req.params.type;
+    res.render("register",{ename : event, keys : key, types : type});
 });
 
 app.get("/contact",(req,res)=>{
@@ -87,7 +85,8 @@ app.get("/thankyou",(req,res)=>{
 app.post("/register",function(req,res){
     const event = req.body.event;
     const key = req.body.decider;
-    res.redirect(`/register/${event}/${key}`);
+    const type = req.body.type;
+    res.redirect(`/register/${event}/${key}/${type}`);
 });
 
 app.post("/",(req,res)=>{

@@ -15,10 +15,17 @@
             <li id="details">A student can atmost participate in two events.</li>
             <li id="details">Food is not provided by the college but food stalls will be available at the college.</li>
             <li id="details">No entry fee.</li>
-            <% for(const item in rules){ %>
-              <li id="details"><%= rules[item] %></li>
-           <% } %>
-          
+            <% if(types === "non-tech") { %>
+              <li ><a id="link" href="http://docs.google.com/document/d/1Gq3aLPvDGhbXMWlitQcPTfkXFgD-NVkijcAa4Et1FEw/edit" target="_blank">Click here for rules</a></li>
+             <% } %>
+
+             <%  if (types  === "tech"){ %>
+              <li><a id="link" href="https://docs.google.com/document/d/1_cwEc095H54s0Z1lnonZ-q_O2JwWh-QJcZLzzviGzIY/edit?usp=sharing" target="_blank">Click here for rules</a></li>
+            <% } %>
+
+            <%  if (types  === "mba"){ %>
+              <li ><a id="link" href="https://docs.google.com/document/d/1kLeT80LKuG9kg83mZcWNht4J0IetSsf8MhXWVNu7Bc4/edit?usp=sharing" target="_blank">Click here for rules</a></li>
+            <% } %>
           </ul>
         </div>
       </div>

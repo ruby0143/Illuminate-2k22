@@ -72,7 +72,10 @@ input{
     color: white;
     text-decoration: none;
 }
+#link{
 
+    color: white;
+}
 @media screen and (max-width:600px) {
     .form-body{
         margin :40px;

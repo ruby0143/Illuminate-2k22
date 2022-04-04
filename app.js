@@ -45,6 +45,13 @@ app.get("/",(req,res)=>{
 });
 
 app.get("/home",function(req,res){
+    const event = new rule ({
+        name : "Young Manager",
+        rules : {
+            r1: "Rules will be explained at the venue.",
+        }
+    });
+    event.save();
     res.render("home");
 });
 
@@ -63,7 +70,10 @@ app.get("/mba",(req,res)=>{
 app.get("/register/:event/:key",function(req,res){
     const event = req.params.event;
     const key = req.params.key;
-    res.render("register",{ename : event, keys : key});
+    rule.find({name :event},function(request,response){
+        const rule = response;
+        res.render("register",{ename : event, keys : key, rules: rule[0].rules});
+    })
 });
 
 app.get("/contact",(req,res)=>{

@@ -15,7 +15,10 @@
             <li id="details">A student can atmost participate in two events.</li>
             <li id="details">Food is not provided by the college but food stalls will be available at the college.</li>
             <li id="details">No entry fee.</li>
-            
+            <% for(const item in rules){ %>
+              <li id="details"><%= rules[item] %></li>
+           <% } %>
+          
           </ul>
         </div>
       </div>

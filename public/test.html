@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Bootstrap Example</title>
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Carousel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <!-- Example Code -->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg
+            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+            width="800"
+            height="400"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: First slide"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <image
+              href="https://cdn.pixabay.com/index/2022/07/11/13-36-34-624_1440x550.jpg"
+            />
+            <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
+          </svg>
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Example headline -XYZ.</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              debitis iure voluptatum laborum ea sequi nihil ad porro
+              maxime. Sequi facilis harum et nesciunt dolorum labore quas
+              veritatis voluptatibus officia!
+            </p>
+            <p>
+                <a
+                  class="btn btn-lg btn-primary"
+                  href="https://www.linkedin.com/in/harsha-mysore-657a30218/"
+                  >CTA Button</a
+                >
+              </p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <svg
+            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+            width="800"
+            height="400"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: First slide"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <image
+              href="https://cdn.pixabay.com/index/2022/07/11/13-36-34-624_1440x550.jpg"
+            />
+            <text x="50%" y="50%" fill="#555" dy=".3em">Second Slide slide</text>
+          </svg>
+
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h5>Example headline -XYZ.</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              debitis iure voluptatum laborum ea sequi nihil ad porro
+              maxime. Sequi facilis harum et nesciunt dolorum labore quas
+              veritatis voluptatibus officia!
+            </p>
+            <p>
+              <a
+                class="btn btn-lg btn-primary"
+                href="https://www.linkedin.com/in/harsha-mysore-657a30218/"
+                >CTA Button</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <svg
+            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+            width="800"
+            height="400"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: Second slide"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <image
+              href="https://cdn.pixabay.com/index/2022/07/11/13-36-34-624_1440x550.jpg"
+            />
+            <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
+          </svg>
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Example headline -XYZ.</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              debitis iure voluptatum laborum ea sequi nihil ad porro
+              maxime. Sequi facilis harum et nesciunt dolorum labore quas
+              veritatis voluptatibus officia!
+            </p>
+            <p>
+              <a
+                class="btn btn-lg btn-primary"
+                href="https://www.linkedin.com/in/harsha-mysore-657a30218/"
+                >CTA Button</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg
+            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+            width="800"
+            height="400"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: Third slide"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <image
+              href="https://cdn.pixabay.com/index/2022/07/11/13-36-34-624_1440x550.jpg"
+            />
+            <text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text>
+          </svg>
+
+          <div class="carousel-caption d-none d-md-block text-end">
+            <h5>Example headline -XYZ.</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              debitis iure voluptatum laborum ea sequi nihil ad porro
+              maxime. Sequi facilis harum et nesciunt dolorum labore quas
+              veritatis voluptatibus officia!
+            </p>
+            <p>
+              <a
+                class="btn btn-lg btn-primary"
+                href="https://www.linkedin.com/in/harsha-mysore-657a30218/"
+                >CTA Button</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- End Example Code -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
